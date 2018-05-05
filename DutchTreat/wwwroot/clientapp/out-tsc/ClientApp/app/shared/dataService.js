@@ -7,30 +7,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from "@angular/core";
-import { DataService } from "../shared/dataService";
-let ProductList = class ProductList {
-    constructor(data) {
-        this.data = data;
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { map } from 'rxjs/operators';
+let DataService = class DataService {
+    constructor(http) {
+        this.http = http;
         this.products = [];
-        this.products = data.products;
+        this.loadProducts();
     }
-    ngOnInit() {
-        this.data.loadProducts()
-            .subscribe(success => {
-            if (success) {
-                this.products = this.data.products;
-            }
-        });
+    loadProducts() {
+        return this.http.get("/api/products").pipe(map((data) => {
+            this.products = data;
+            return true;
+        }));
     }
 };
-ProductList = __decorate([
-    Component({
-        selector: "product-list",
-        templateUrl: "productList.component.html",
-        styleUrls: []
-    }),
-    __metadata("design:paramtypes", [DataService])
-], ProductList);
-export { ProductList };
-//# sourceMappingURL=productList.component.js.map
+DataService = __decorate([
+    Injectable(),
+    __metadata("design:paramtypes", [HttpClient])
+], DataService);
+export { DataService };
+//# sourceMappingURL=dataService.js.map

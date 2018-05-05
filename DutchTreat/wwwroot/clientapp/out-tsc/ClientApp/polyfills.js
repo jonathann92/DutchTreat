@@ -1,4 +1,3 @@
-"use strict";
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -14,7 +13,6 @@
  *
  * Learn more in https://angular.io/docs/ts/latest/guide/browser-support.html
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
@@ -39,7 +37,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // import 'core-js/es6/reflect';
 /** Evergreen browsers require these. **/
 // Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.
-require("core-js/es7/reflect");
+import 'core-js/es7/reflect';
 /**
  * Web Animations `@angular/platform-browser/animations`
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
@@ -61,7 +59,7 @@ require("core-js/es7/reflect");
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-require("zone.js/dist/zone"); // Included with Angular CLI.
+import 'zone.js/dist/zone'; // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
