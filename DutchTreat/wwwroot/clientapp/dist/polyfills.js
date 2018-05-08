@@ -5467,7 +5467,7 @@ Zone.__load_patch('PromiseRejectionEvent', function (global, Zone) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Jonathan\Documents\DutchTreat\DutchTreat\ClientApp\polyfills.ts */"./ClientApp/polyfills.ts");
+module.exports = __webpack_require__(/*! /Users/jnguyen/git/jnguyen/DutchTreat/DutchTreat/ClientApp/polyfills.ts */"./ClientApp/polyfills.ts");
 
 
 /***/ })

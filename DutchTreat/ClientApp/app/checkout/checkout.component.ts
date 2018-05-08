@@ -15,12 +15,10 @@ export class Checkout {
   errorMessage: string = "";
 
     onCheckout() {
-        alert("doing checkout");
-    //this.data.checkout()
-    //  .subscribe(success => {
-    //    if (success) {
-    //      this.router.navigate(["/"]);
-    //    }
-    //  }, err => this.errorMessage = "Failed to save order");
+        this.data.checkout().subscribe(success => {
+          if (success) {
+            this.router.navigate(["/"])
+          }
+        }, err => this.errorMessage = "Failed to save order");
   }
 }
