@@ -38,8 +38,7 @@ export class DataService {
             item.productTitle = newProduct.title;
             item.unitPrice = newProduct.price;
             item.quantity = 1;
-        }
-
-        this.order.items.push();
+            this.order.items.push(item);
+        }   
     }
 }

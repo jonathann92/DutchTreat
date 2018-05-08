@@ -23,12 +23,15 @@ let ProductList = class ProductList {
             }
         });
     }
+    addProduct(product) {
+        this.data.AddToOrder(product);
+    }
 };
 ProductList = __decorate([
     Component({
         selector: "product-list",
         templateUrl: "productList.component.html",
-        styleUrls: []
+        styleUrls: ["productList.component.css"]
     }),
     __metadata("design:paramtypes", [DataService])
 ], ProductList);
